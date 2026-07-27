@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – ADU, Kitchen, Bathroom &amp; Home Remodeling | Allcare Design/Build San Diego</title>
+  <meta name="description" content="Explore Allcare Design/Build's full range of services: ADU construction, kitchen remodels, bathroom remodels, whole-home renovations, room additions, and new construction across San Diego County." />
+  <meta name="keywords" content="ADU construction San Diego, kitchen remodel San Diego, bathroom remodel San Diego, whole home remodel San Diego, room addition San Diego, new home construction San Diego, design build services San Diego" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://allcaredesignbuild.com/services.html" />
+  <meta property="og:title" content="Services – ADU, Kitchen, Bathroom &amp; Home Remodeling | Allcare Design/Build" />
+  <meta property="og:description" content="Full-service design and construction in San Diego County. ADUs, kitchen/bathroom remodels, whole-home renovations, additions, and new construction." />
+  <meta property="og:image" content="https://allcaredesignbuild.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://allcaredesignbuild.com/services.html" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <style>
+    .service-section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .service-section.alt-bg { background: var(--off-white); border-bottom: none; }
+
+    .service-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .service-layout.reverse { direction: rtl; }
+    .service-layout.reverse > * { direction: ltr; }
+    @media (max-width: 860px) {
+      .service-layout, .service-layout.reverse { grid-template-columns: 1fr; direction: ltr; gap: 36px; }
+    }
+
+    .service-img-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+    .service-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .service-img-badge {
+      position: absolute;
+      bottom: 20px; left: 20px;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 8px 16px; border-radius: 4px;
+    }
+    .service-img-badge span { color: var(--gold); }
+
+    .service-number {
+      font-family: var(--font-heading);
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .service-number::after {
+      content: ''; flex: 1; max-width: 40px;
+      height: 2px; background: var(--gold); border-radius: 1px;
+    }
+    .service-body h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 16px; color: var(--navy); }
+    .service-body .lead { font-size: 1.1rem; color: var(--dark-gray); line-height: 1.7; margin-bottom: 28px; }
+
+    .service-features {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; margin-bottom: 28px;
+    }
+    @media (max-width: 500px) { .service-features { grid-template-columns: 1fr; } }
+    .service-feature-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.9rem; color: var(--dark-gray); line-height: 1.4;
+    }
+    .service-feature-item::before {
+      content: '';
+      width: 18px; height: 18px; min-width: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      position: relative; top: 1px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23C9933B' stroke-width='3'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: center; background-size: 10px;
+    }
+
+    .service-stats-row {
+      display: flex; gap: 28px;
+      padding: 20px 0;
+      border-top: 1px solid var(--light-gray); border-bottom: 1px solid var(--light-gray);
+      margin-bottom: 28px;
+    }
+    .service-stat-num {
+      font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--navy); line-height: 1;
+    }
+    .service-stat-lbl { font-size: 0.75rem; color: var(--mid-gray); letter-spacing: 0.04em; text-transform: uppercase; }
+
+    .why-strip { background: var(--navy); padding: 64px 0; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    @media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-item { text-align: center; }
+    .why-item svg { color: var(--gold); margin-bottom: 16px; }
+    .why-item h4 { color: #fff; font-size: 1rem; margin-bottom: 8px; }
+    .why-item p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.6; margin: 0; }
+
+    .process-section { padding: 80px 0; background: var(--sky); }
+    .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .process-steps { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 560px) { .process-steps { grid-template-columns: 1fr 1fr; } }
+    .process-step {
+      text-align: center; padding: 28px 16px;
+      background: #fff; border-radius: 10px; box-shadow: var(--shadow-sm);
+    }
+    .process-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--navy); color: #fff;
+      font-family: var(--font-heading); font-weight: 800; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .process-step h4 { font-size: 0.9rem; color: var(--navy); margin-bottom: 6px; }
+    .process-step p { font-size: 0.82rem; color: var(--mid-gray); margin: 0; line-height: 1.5; }
+
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--light-gray); }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0; cursor: pointer;
+      font-family: var(--font-heading); font-weight: 600; font-size: 1rem; color: var(--navy); gap: 16px;
+    }
+    .faq-icon {
+      width: 28px; height: 28px; min-width: 28px; border-radius: 50%;
+      background: var(--sky); display: flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+    }
+    .faq-item.open .faq-icon { background: var(--navy); }
+    .faq-item.open .faq-icon svg { stroke: #fff; transform: rotate(45deg); }
+    .faq-icon svg { transition: var(--transition); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; font-size: 0.95rem; color: var(--dark-gray); line-height: 1.7; }
+    .faq-answer-inner { padding-bottom: 20px; }
+
+    .quick-nav {
+      background: var(--navy); overflow-x: auto; white-space: nowrap;
+    }
+    .quick-nav-inner { display: flex; }
+    .quick-nav-link {
+      display: inline-block; padding: 14px 22px;
+      font-family: var(--font-heading); font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: rgba(255,255,255,0.65); text-decoration: none;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      transition: color 0.2s, background 0.2s;
+    }
+    .quick-nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+    .quick-nav-link:last-child { border-right: none; }
+  </style>
+  <!-- ==========================================
+       PASTE YOUR GA4 GTAG SNIPPET HERE
+       (Get it from analytics.google.com)
+       ========================================== -->
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header" data-transparent="false">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-pill">
+          <img src="images/logo-dark-bg.png" alt="Allcare Design/Build, Inc." width="160" height="42" />
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:6194620133" class="nav-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.9v2.02z"/></svg>
+          (619) 462-0133
+        </a>
+        <a href="contact.html" class="btn btn-primary">Free Consultation</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="tel:6194620133" class="mobile-phone">📞 (619) 462-0133</a>
+  <a href="contact.html" class="btn btn-primary mt-24">Book Free Consultation</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+        <span>Services</span>
+      </div>
+      <h1>What We Build</h1>
+      <p>Full-service design and construction — from ADUs to whole-home remodels. We handle every phase in-house, so there's one point of contact and zero surprises.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<div class="quick-nav">
+  <div class="container">
+    <div class="quick-nav-inner">
+      <a href="#adu" class="quick-nav-link">ADU / Additions</a>
+      <a href="#kitchen" class="quick-nav-link">Kitchen</a>
+      <a href="#bathroom" class="quick-nav-link">Bathroom</a>
+      <a href="#whole-home" class="quick-nav-link">Whole Home</a>
+      <a href="#additions" class="quick-nav-link">Room Additions</a>
+      <a href="#new-construction" class="quick-nav-link">New Construction</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 1: ADU -->
+<section class="service-section" id="adu">
+  <div class="container">
+    <div class="service-layout fade-up">
+      <div class="service-img-wrap">
+        <img src="images/adu-real-2.jpg" alt="Custom ADU construction in San Diego County by Allcare Design/Build" loading="lazy" />
+        <div class="service-img-badge">Licensed &amp; Permitted · <span>All San Diego County</span></div>
+      </div>
+      <div class="service-body">
+        <div class="service-number">Service 01 · ADU Construction</div>
+        <h2>Accessory Dwelling Units</h2>
+        <p class="lead">Add livable square footage — and real value — to your property. Whether it's a detached backyard unit, a garage conversion, or an attached suite, we handle permits, design, and construction start to finish.</p>
+        <div class="service-features">
+          <div class="service-feature-item">Detached &amp; attached ADUs</div>
+          <div class="service-feature-item">Garage conversions</div>
+          <div class="service-feature-item">Junior ADUs (JADUs)</div>
+          <div class="service-feature-item">Full permit management</div>
+          <div class="service-feature-item">Foundation to finish</div>
+          <div class="service-feature-item">Rental income potential</div>
+        </div>
+        <div class="service-stats-row">
+          <div class="service-stat"><div class="service-stat-num">300+</div><div class="service-stat-lbl">ADUs Built</div></div>
+          <div class="service-stat"><div class="service-stat-num">$200K+</div><div class="service-stat-lbl">Avg Value Add</div></div>
+          <div class="service-stat"><div class="service-stat-num">4–6 mo</div><div class="service-stat-lbl">Typical Timeline</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get a Free ADU Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 2: KITCHEN -->
+<section class="service-section alt-bg" id="kitchen">
+  <div class="container">
+    <div class="service-layout reverse fade-up">
+      <div class="service-img-wrap">
+        <img src="images/kitchen-real-1.jpg" alt="Full kitchen remodel San Diego – Allcare Design/Build" loading="lazy" />
+        <div class="service-img-badge">2,500+ <span>Projects Completed</span></div>
+      </div>
+      <div class="service-body">
+        <div class="service-number">Service 02 · Kitchen Remodeling</div>
+        <h2>Kitchen Remodels</h2>
+        <p class="lead">The kitchen is the heart of the home — and the project that delivers the biggest return on investment. Custom cabinets, countertops, layout, lighting — we take it all the way from concept to completion.</p>
+        <div class="service-features">
+          <div class="service-feature-item">Custom &amp; semi-custom cabinetry</div>
+          <div class="service-feature-item">Quartz &amp; granite countertops</div>
+          <div class="service-feature-item">Layout reconfiguration</div>
+          <div class="service-feature-item">Backsplash &amp; tile work</div>
+          <div class="service-feature-item">Plumbing &amp; electrical</div>
+          <div class="service-feature-item">Appliance coordination</div>
+        </div>
+        <div class="service-stats-row">
+          <div class="service-stat"><div class="service-stat-num">600+</div><div class="service-stat-lbl">Kitchens Remodeled</div></div>
+          <div class="service-stat"><div class="service-stat-num">70–80%</div><div class="service-stat-lbl">Average ROI</div></div>
+          <div class="service-stat"><div class="service-stat-num">4–12 wk</div><div class="service-stat-lbl">Timeline</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get a Free Kitchen Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 3: BATHROOM -->
+<section class="service-section" id="bathroom">
+  <div class="container">
+    <div class="service-layout fade-up">
+      <div class="service-img-wrap">
+        <img src="images/bathroom-real-1.jpg" alt="Bathroom remodel San Diego – Allcare Design/Build" loading="lazy" />
+        <div class="service-img-badge">35+ Years · <span>San Diego's Trusted Remodeler</span></div>
+      </div>
+      <div class="service-body">
+        <div class="service-number">Service 03 · Bathroom Remodeling</div>
+        <h2>Bathroom Remodels</h2>
+        <p class="lead">From a quick refresh to a complete spa-style overhaul, we've remodeled hundreds of San Diego bathrooms. Tile, plumbing, fixtures, cabinetry — our team handles every detail.</p>
+        <div class="service-features">
+          <div class="service-feature-item">Walk-in shower conversions</div>
+          <div class="service-feature-item">Soaker &amp; freestanding tubs</div>
+          <div class="service-feature-item">Tile &amp; stone work</div>
+          <div class="service-feature-item">Vanity &amp; lighting upgrades</div>
+          <div class="service-feature-item">Frameless glass enclosures</div>
+          <div class="service-feature-item">Full plumbing &amp; electrical</div>
+        </div>
+        <div class="service-stats-row">
+          <div class="service-stat"><div class="service-stat-num">800+</div><div class="service-stat-lbl">Bathrooms Remodeled</div></div>
+          <div class="service-stat"><div class="service-stat-num">60–67%</div><div class="service-stat-lbl">Average ROI</div></div>
+          <div class="service-stat"><div class="service-stat-num">2–6 wk</div><div class="service-stat-lbl">Timeline</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get a Free Bathroom Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 4: WHOLE HOME -->
+<section class="service-section alt-bg" id="whole-home">
+  <div class="container">
+    <div class="service-layout reverse fade-up">
+      <div class="service-img-wrap">
+        <img src="images/wholehome-real-1.jpg" alt="Whole home remodel San Diego County – Allcare Design/Build" loading="lazy" />
+        <div class="service-img-badge">Full Design-Build · <span>One Team, One Contract</span></div>
+      </div>
+      <div class="service-body">
+        <div class="service-number">Service 04 · Whole Home Remodels</div>
+        <h2>Whole Home Remodels</h2>
+        <p class="lead">Ready to transform your entire home? We coordinate every trade — framing, plumbing, electrical, HVAC, flooring, and finish work — under one roof. No juggling contractors. No finger-pointing. Just a beautiful result.</p>
+        <div class="service-features">
+          <div class="service-feature-item">Full interior overhauls</div>
+          <div class="service-feature-item">Open floor plan conversions</div>
+          <div class="service-feature-item">Structural modifications</div>
+          <div class="service-feature-item">Flooring &amp; paint throughout</div>
+          <div class="service-feature-item">Full systems upgrades</div>
+          <div class="service-feature-item">Design-build coordination</div>
+        </div>
+        <div class="service-stats-row">
+          <div class="service-stat"><div class="service-stat-num">400+</div><div class="service-stat-lbl">Homes Remodeled</div></div>
+          <div class="service-stat"><div class="service-stat-num">$500K–2M+</div><div class="service-stat-lbl">Project Range</div></div>
+          <div class="service-stat"><div class="service-stat-num">3–12 mo</div><div class="service-stat-lbl">Timeline</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get a Free Whole Home Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 5: ROOM ADDITIONS -->
+<section class="service-section" id="additions">
+  <div class="container">
+    <div class="service-layout fade-up">
+      <div class="service-img-wrap">
+        <img src="images/adu-real-5.jpg" alt="Room addition construction San Diego – Allcare Design/Build" loading="lazy" />
+        <div class="service-img-badge">Licensed · <span>Fully Permitted</span></div>
+      </div>
+      <div class="service-body">
+        <div class="service-number">Service 05 · Room Additions</div>
+        <h2>Room Additions</h2>
+        <p class="lead">Need more space but love your neighborhood? A room addition lets you stay put and grow into your home. We've added master suites, home offices, sunrooms, and family rooms to hundreds of San Diego homes.</p>
+        <div class="service-features">
+          <div class="service-feature-item">Master bedroom suites</div>
+          <div class="service-feature-item">Home offices &amp; studios</div>
+          <div class="service-feature-item">Family room expansions</div>
+          <div class="service-feature-item">Second-story additions</div>
+          <div class="service-feature-item">Sunrooms &amp; enclosures</div>
+          <div class="service-feature-item">Permits &amp; engineering</div>
+        </div>
+        <div class="service-stats-row">
+          <div class="service-stat"><div class="service-stat-num">350+</div><div class="service-stat-lbl">Additions Built</div></div>
+          <div class="service-stat"><div class="service-stat-num">50–80%</div><div class="service-stat-lbl">Average ROI</div></div>
+          <div class="service-stat"><div class="service-stat-num">2–6 mo</div><div class="service-stat-lbl">Timeline</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get a Free Addition Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 6: NEW CONSTRUCTION -->
+<section class="service-section alt-bg" id="new-construction">
+  <div class="container">
+    <div class="service-layout reverse fade-up">
+      <div class="service-img-wrap">
+        <img src="images/newconstruction-real-1.jpg" alt="New home construction San Diego County – Allcare Design/Build" loading="lazy" />
+        <div class="service-img-badge">Custom Builds · <span>Ground Up</span></div>
+      </div>
+      <div class="service-body">
+        <div class="service-number">Service 06 · New Construction</div>
+        <h2>New Home Construction</h2>
+        <p class="lead">Building from the ground up? Allcare is your single point of contact — from architectural plans and permits through framing, systems, and final finishes. We build custom homes that reflect how you actually live.</p>
+        <div class="service-features">
+          <div class="service-feature-item">Custom home design</div>
+          <div class="service-feature-item">Architectural coordination</div>
+          <div class="service-feature-item">Site preparation &amp; grading</div>
+          <div class="service-feature-item">Foundation to roof</div>
+          <div class="service-feature-item">Finish &amp; interior selections</div>
+          <div class="service-feature-item">Final walkthrough &amp; warranty</div>
+        </div>
+        <div class="service-stats-row">
+          <div class="service-stat"><div class="service-stat-num">50+</div><div class="service-stat-lbl">Custom Homes Built</div></div>
+          <div class="service-stat"><div class="service-stat-num">$800K–3M+</div><div class="service-stat-lbl">Project Range</div></div>
+          <div class="service-stat"><div class="service-stat-num">8–18 mo</div><div class="service-stat-lbl">Timeline</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Talk to Us About New Construction</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ALLCARE -->
+<div style="background:#0C2340; padding:64px 0; direction:ltr;">
+  <div style="max-width:1240px; margin:0 auto; padding:0 24px;">
+    <div style="text-align:center; margin-bottom:44px;">
+      <span style="display:inline-block; font-family:'Raleway',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:12px;">The Allcare Difference</span>
+      <h2 style="color:#fff; font-family:'Raleway',sans-serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:700; margin:0;">Why Homeowners Choose Us</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px; direction:ltr;">
+      <div style="text-align:center; padding:32px 20px; background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C9933B" stroke-width="1.5" style="margin-bottom:16px; display:block; margin-left:auto; margin-right:auto;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3 style="color:#fff; font-family:'Raleway',sans-serif; font-size:1rem; font-weight:700; margin:0 0 8px;">Licensed &amp; Insured</h3>
+        <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6; margin:0;">CA License B #564360. Licensed, bonded, and fully insured on every job.</p>
+      </div>
+      <div style="text-align:center; padding:32px 20px; background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C9933B" stroke-width="1.5" style="margin-bottom:16px; display:block; margin-left:auto; margin-right:auto;"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        <h3 style="color:#fff; font-family:'Raleway',sans-serif; font-size:1rem; font-weight:700; margin:0 0 8px;">35+ Years in San Diego</h3>
+        <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6; margin:0;">Since 1989 — we know the local codes, climate, and neighborhoods inside and out.</p>
+      </div>
+      <div style="text-align:center; padding:32px 20px; background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C9933B" stroke-width="1.5" style="margin-bottom:16px; display:block; margin-left:auto; margin-right:auto;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <h3 style="color:#fff; font-family:'Raleway',sans-serif; font-size:1rem; font-weight:700; margin:0 0 8px;">One Team, One Contract</h3>
+        <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6; margin:0;">Our in-house crew handles every trade. You'll never get passed around between subs.</p>
+      </div>
+      <div style="text-align:center; padding:32px 20px; background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C9933B" stroke-width="1.5" style="margin-bottom:16px; display:block; margin-left:auto; margin-right:auto;"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>
+        <h3 style="color:#fff; font-family:'Raleway',sans-serif; font-size:1rem; font-weight:700; margin:0 0 8px;">4.9★ Rated</h3>
+        <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6; margin:0;">Hundreds of five-star reviews from real San Diego homeowners.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header centered fade-up">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-heading">Our 5-Step Process</h2>
+      <p class="section-sub">From your first call to final walkthrough — here's how every Allcare project runs.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="process-num">1</div>
+        <h3>Free Consultation</h3>
+        <p>We learn your goals, budget, and timeline. No pressure, no obligation.</p>
+      </div>
+      <div class="process-step fade-up delay-1">
+        <div class="process-num">2</div>
+        <h3>Design &amp; Planning</h3>
+        <p>We create plans, handle permits, and finalize selections before work begins.</p>
+      </div>
+      <div class="process-step fade-up delay-2">
+        <div class="process-num">3</div>
+        <h3>Transparent Proposal</h3>
+        <p>Detailed scope with line-item pricing. No hidden fees or vague estimates.</p>
+      </div>
+      <div class="process-step fade-up delay-3">
+        <div class="process-num">4</div>
+        <h3>Construction</h3>
+        <p>Our in-house crew gets to work. Regular updates and site access throughout.</p>
+      </div>
+      <div class="process-step fade-up delay-4">
+        <div class="process-num">5</div>
+        <h3>Final Walkthrough</h3>
+        <p>We walk through every detail together. You don't sign off until it's right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header centered fade-up">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <div class="faq-question">How long does a typical remodel take?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Timeline depends on scope. A bathroom takes 2–6 weeks, a kitchen 4–12 weeks, and a full home remodel or ADU can run 3–12 months. We'll give you a detailed schedule before any work starts.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you handle permits?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes — permits and inspections are included in every project that requires them. We know San Diego County's permitting process inside and out, and we manage every step so you don't have to.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What's the minimum project size you take on?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">We focus on full remodels and construction projects rather than small repairs. Bathroom remodels, kitchen remodels, ADUs, additions, and whole-home projects are our sweet spot. Call us and we'll be straight with you about fit.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer financing options?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. We work with lenders who offer home improvement and construction loans. We can walk you through options during your free consultation — including HELOCs, ADU-specific financing, and renovation loans.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How much does an ADU cost in San Diego?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">ADU costs in San Diego typically range from $150,000 to $400,000+ depending on size, design, and site conditions. Garage conversions tend to be on the lower end. We'll give you a detailed estimate after reviewing your property — no guesswork.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-banner">
+  <div class="container">
+    <div class="cta-banner-inner fade-up">
+      <div>
+        <h2>Ready to Start Your Project?</h2>
+        <p>Get a free, no-pressure consultation. We'll walk through your goals, timeline, and budget — and give you honest answers.</p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="contact.html" class="btn btn-primary btn-xl">Book Free Consultation</a>
+        <a href="tel:6194620133" class="btn btn-outline btn-lg">(619) 462-0133</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-logo">
+          <span class="logo-pill footer-logo-pill">
+            <img src="images/logo-dark-bg.png" alt="Allcare Design/Build, Inc." width="160" height="42" loading="lazy" />
+          </span>
+        </a>
+        <p class="footer-tagline" style="margin-top:16px;">"No matter the project, if you can dream it, Allcare Design/Build can build it." — Serving San Diego County since 1989.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/allcaredesignbuild" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/allcaredesignbuild" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/richardcerv" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Services</p>
+        <ul class="footer-links">
+          <li><a href="services.html#adu">ADU Construction</a></li>
+          <li><a href="services.html#kitchen">Kitchen Remodels</a></li>
+          <li><a href="services.html#bathroom">Bathroom Remodels</a></li>
+          <li><a href="services.html#whole-home">Whole Home Remodels</a></li>
+          <li><a href="services.html#additions">Room Additions</a></li>
+          <li><a href="services.html#new-construction">New Construction</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Free Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact Us</p>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.9v2.02z"/></svg>
+          <a href="tel:6194620133">(619) 462-0133</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@allcaredesignbuild.com">info@allcaredesignbuild.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="color:rgba(255,255,255,0.5);">Spring Valley, CA 91976<br/>Serving all San Diego County</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary mt-16" style="width:100%; justify-content:center;">Book Free Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Allcare Design/Build, Inc. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p class="footer-license">CA Contractor License B #564360 | Licensed, Bonded &amp; Insured</p>
+      <p style="font-size:0.72rem; color:rgba(255,255,255,0.35); margin-top:8px;">Designed + Built by <a href="https://warroomagency.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5); text-decoration:underline;">War Room Agency</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="float-cta">
+  <span class="float-tip">Call Now</span>
+  <a href="tel:6194620133" class="float-btn" aria-label="Call Allcare">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.9v2.02z"/></svg>
+  </a>
+</div>
+
+<script src="js/main.js?v=3"></script>
+<script>
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69fd496f5b108d72b1a873f3" data-source="WEB_USER"></script>
+</body>
+</html>

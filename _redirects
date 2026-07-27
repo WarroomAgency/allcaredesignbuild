@@ -1,0 +1,13 @@
+# Netlify Redirects
+# Redirect old WordPress URLs if needed
+/adu/*          /services.html#adu      301
+/kitchen/*      /services.html#kitchen  301
+/bathroom/*     /services.html#bathroom 301
+/remodeling/*   /services.html          301
+/gallery/*      /portfolio.html         301
+/contact-us     /contact.html           301
+/free-estimate  /contact.html           301
+/about-us       /about.html             301
+
+# Handle trailing slashes
+/index          /                       301
