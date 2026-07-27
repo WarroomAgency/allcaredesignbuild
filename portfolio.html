@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – San Diego Home Remodel &amp; ADU Projects | Allcare Design/Build</title>
-  <meta name="description" content="Browse Allcare Design/Build's portfolio of completed San Diego projects — ADU construction, kitchen remodels, bathroom renovations, whole home transformations, and before/after reveals." />
-  <meta name="keywords" content="San Diego remodel portfolio, ADU before after San Diego, kitchen remodel before after San Diego, home renovation gallery San Diego, Allcare Design Build projects" />
+  <meta name="description" content="Browse Allcare Design/Build's portfolio of completed San Diego projects — ADU construction, kitchen remodels, bathroom renovations, and whole-home transformations across San Diego County." />
+  <meta name="keywords" content="San Diego remodel portfolio, ADU construction San Diego, kitchen remodel San Diego, bathroom remodel San Diego, home renovation gallery San Diego, Allcare Design Build projects" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://allcaredesignbuild.com/portfolio.html" />
   <meta property="og:title" content="Portfolio – San Diego Projects | Allcare Design/Build" />
@@ -81,87 +81,6 @@
     .portfolio-card:hover .portfolio-overlay { opacity: 1; }
     .portfolio-overlay h4 { color: #fff; font-size: 1rem; margin: 0 0 4px; }
     .portfolio-overlay span { color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
-
-    /* Before/After Sliders */
-    .ba-section-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-    @media (max-width: 768px) { .ba-section-grid { grid-template-columns: 1fr; } }
-
-    .ba-item {}
-    .ba-item-label {
-      text-align: center;
-      margin-top: 12px;
-      font-size: 0.82rem;
-      color: var(--mid-gray);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .ba-container {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      border-radius: 10px;
-      cursor: ew-resize;
-      user-select: none;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-    .ba-before, .ba-after {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .ba-before { z-index: 1; }
-    .ba-after { z-index: 2; clip-path: inset(0 50% 0 0); }
-    .ba-slider-line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 3px;
-      background: #fff;
-      z-index: 3;
-      transform: translateX(-50%);
-      pointer-events: none;
-    }
-    .ba-handle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-      gap: 2px;
-    }
-    .ba-label {
-      position: absolute;
-      top: 14px;
-      z-index: 4;
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
-    .ba-label.before { left: 14px; }
-    .ba-label.after { right: 14px; }
 
     /* Lightbox */
     .lightbox-overlay {
@@ -261,89 +180,6 @@
       </div>
       <h1>Our Work</h1>
       <p>2,500+ completed projects across San Diego County. Every one a story of transformation.</p>
-    </div>
-  </div>
-</section>
-
-<!-- BEFORE / AFTER SECTION -->
-<section class="section" id="before-after">
-  <div class="container">
-    <div class="section-header centered fade-up">
-      <span class="section-label">Real Transformations</span>
-      <h2 class="section-heading">Before &amp; After</h2>
-      <p class="section-sub">Drag the slider to reveal the transformation. These are real Allcare Design/Build projects right here in San Diego County.</p>
-    </div>
-
-    <div class="ba-section-grid">
-
-      <!-- BA Slider 1 – Kitchen -->
-      <div class="ba-item fade-up">
-        <div class="ba-container" data-ba>
-          <img src="images/ba-kitchen-before.webp" alt="Before: Outdated, worn kitchen in San Diego – before remodel" class="ba-before" />
-          <img src="images/kitchen-after-1.webp" alt="After: Stunning kitchen remodel by Allcare Design/Build" class="ba-after" />
-          <div class="ba-slider-line">
-            <div class="ba-handle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
-            </div>
-          </div>
-          <span class="ba-label before">Before</span>
-          <span class="ba-label after">After</span>
-        </div>
-        <p class="ba-item-label">Kitchen Remodel — La Mesa, CA</p>
-      </div>
-
-      <!-- BA Slider 2 – Kitchen 2 -->
-      <div class="ba-item fade-up delay-1">
-        <div class="ba-container" data-ba>
-          <img src="images/kitchen-before-2.webp" alt="Before: Dark cramped kitchen in San Diego home" class="ba-before" />
-          <img src="images/kitchen-after-3.webp" alt="After: Open bright kitchen remodel by Allcare Design/Build" class="ba-after" />
-          <div class="ba-slider-line">
-            <div class="ba-handle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
-            </div>
-          </div>
-          <span class="ba-label before">Before</span>
-          <span class="ba-label after">After</span>
-        </div>
-        <p class="ba-item-label">Kitchen Transformation — Santee, CA</p>
-      </div>
-
-      <!-- BA Slider 3 – Kitchen 3 -->
-      <div class="ba-item fade-up">
-        <div class="ba-container" data-ba>
-          <img src="images/ba-before-1.webp" alt="Before: Distressed kitchen prior to renovation – Chula Vista" class="ba-before" />
-          <img src="images/kitchen-after-2.webp" alt="After: Modern kitchen remodel by Allcare Design/Build" class="ba-after" />
-          <div class="ba-slider-line">
-            <div class="ba-handle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
-            </div>
-          </div>
-          <span class="ba-label before">Before</span>
-          <span class="ba-label after">After</span>
-        </div>
-        <p class="ba-item-label">Kitchen Remodel — Chula Vista, CA</p>
-      </div>
-
-      <!-- BA Slider 4 – Kitchen 4 -->
-      <div class="ba-item fade-up delay-1">
-        <div class="ba-container" data-ba>
-          <img src="images/kitchen-before-2.webp" alt="Before: Outdated kitchen cabinets in El Cajon" class="ba-before" />
-          <img src="images/kitchen-after-4.webp" alt="After: White shaker kitchen remodel by Allcare" class="ba-after" />
-          <div class="ba-slider-line">
-            <div class="ba-handle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C2340" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
-            </div>
-          </div>
-          <span class="ba-label before">Before</span>
-          <span class="ba-label after">After</span>
-        </div>
-        <p class="ba-item-label">Kitchen Update — El Cajon, CA</p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -780,29 +616,6 @@
       const visibleIndex = visibleCards.indexOf(card);
       openLightbox(visibleIndex);
     });
-  });
-
-  // Before/After Sliders
-  document.querySelectorAll('[data-ba]').forEach(container => {
-    const afterImg = container.querySelector('.ba-after');
-    const sliderLine = container.querySelector('.ba-slider-line');
-    let isDragging = false;
-
-    function setPosition(x) {
-      const rect = container.getBoundingClientRect();
-      let pct = ((x - rect.left) / rect.width) * 100;
-      pct = Math.max(2, Math.min(98, pct));
-      afterImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-      sliderLine.style.left = pct + '%';
-    }
-
-    container.addEventListener('mousedown', e => { isDragging = true; setPosition(e.clientX); e.preventDefault(); });
-    window.addEventListener('mousemove', e => { if (isDragging) setPosition(e.clientX); });
-    window.addEventListener('mouseup', () => { isDragging = false; });
-
-    container.addEventListener('touchstart', e => { isDragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('touchmove', e => { if (isDragging) setPosition(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('touchend', () => { isDragging = false; });
   });
 </script>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69fd496f5b108d72b1a873f3" data-source="WEB_USER"></script>

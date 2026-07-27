@@ -118,39 +118,6 @@
   }
 
   /* --------------------------------------------------
-     BEFORE/AFTER SLIDER
-  -------------------------------------------------- */
-  document.querySelectorAll('.ba-container').forEach(container => {
-    const afterImg = container.querySelector('.ba-after');
-    const line     = container.querySelector('.ba-slider-line');
-    if (!afterImg || !line) return;
-
-    let dragging = false;
-
-    function setPosition(x) {
-      const rect = container.getBoundingClientRect();
-      let pct = ((x - rect.left) / rect.width) * 100;
-      pct = Math.max(2, Math.min(98, pct));
-      line.style.left = pct + '%';
-      afterImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-    }
-
-    line.addEventListener('mousedown', e => { e.preventDefault(); dragging = true; });
-    line.addEventListener('touchstart', e => { dragging = true; }, { passive: true });
-
-    window.addEventListener('mousemove', e => { if (dragging) setPosition(e.clientX); });
-    window.addEventListener('touchmove', e => {
-      if (dragging) setPosition(e.touches[0].clientX);
-    }, { passive: true });
-
-    window.addEventListener('mouseup',  () => { dragging = false; });
-    window.addEventListener('touchend', () => { dragging = false; });
-
-    // Initial position at 50%
-    setPosition(container.getBoundingClientRect().left + container.getBoundingClientRect().width / 2);
-  });
-
-  /* --------------------------------------------------
      FAQ ACCORDION
   -------------------------------------------------- */
   document.querySelectorAll('.faq-question').forEach(btn => {

@@ -741,66 +741,6 @@ p:last-child { margin-bottom: 0; }
   text-transform: uppercase;
 }
 
-/* Before/After Slider */
-.ba-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  aspect-ratio: 4/3;
-  user-select: none;
-  background: var(--light-gray);
-}
-.ba-container img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
-.ba-after { clip-path: inset(0 50% 0 0); }
-.ba-slider-line {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: var(--white);
-  z-index: 2;
-  cursor: ew-resize;
-}
-.ba-handle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-  cursor: ew-resize;
-  z-index: 3;
-  color: var(--navy);
-}
-.ba-label {
-  position: absolute;
-  top: 16px;
-  font-family: var(--font-heading);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--white);
-  background: rgba(12,35,64,0.7);
-  padding: 4px 10px;
-  border-radius: 2px;
-  z-index: 4;
-}
-.ba-label.before { left: 16px; }
-.ba-label.after  { right: 16px; }
-
 /* Portfolio Filter */
 .portfolio-filters {
   display: flex;
@@ -1789,11 +1729,6 @@ html {
 @media (max-width: 480px) {
   .service-stats-row { flex-wrap: wrap; gap: 16px; }
   .service-stats-row .service-stat { min-width: 80px; }
-}
-
-/* Before/after sliders: full width, no side bleed */
-@media (max-width: 768px) {
-  .ba-wrap { touch-action: none; }
 }
 
 /* CTA banner decorative circles — clip so they don't scroll out */
