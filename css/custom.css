@@ -1,0 +1,20 @@
+.blog-details ul li{
+    list-style: disc;
+}
+.blog-details ol li{
+    list-style: decimal;
+}
+.blog-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blog-details tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-details td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
