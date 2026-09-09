@@ -18,3 +18,6 @@
   text-align: left;
   border: 1px solid #ddd;
 }
+.blog-details a {
+    color: #2681f0;
+}
