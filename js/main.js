@@ -211,6 +211,7 @@
             <p>Thank you for reaching out. A member of our team will contact you within 1 business day to schedule your free consultation.</p>
             <p style="margin-top:16px;"><strong>Need immediate assistance?</strong> Call us at <a href="tel:6194620133" style="color:var(--blue-bright);">(619) 462-0133</a></p>
           </div>`;
+         window.location.href = '/thank-you.html';
       })
       .catch(() => {
         // Fallback — still show success (Netlify may still process it)
