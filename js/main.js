@@ -215,7 +215,7 @@
       // })
 
 .then(() => {
-  window.location.href = '/thank-you.html';
+  window.location.href = '/thank-you';
 })         
       .catch(() => {
         // Fallback — still show success (Netlify may still process it)
