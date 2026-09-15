@@ -203,16 +203,20 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(new FormData(contactForm)).toString()
       })
-      .then(() => {
-        contactForm.innerHTML = `
-          <div style="text-align:center;padding:48px 0;">
-            <div style="font-size:3rem;margin-bottom:16px;">✅</div>
-            <h3 style="color:var(--navy);margin-bottom:12px;">Message Received!</h3>
-            <p>Thank you for reaching out. A member of our team will contact you within 1 business day to schedule your free consultation.</p>
-            <p style="margin-top:16px;"><strong>Need immediate assistance?</strong> Call us at <a href="tel:6194620133" style="color:var(--blue-bright);">(619) 462-0133</a></p>
-          </div>`;
-         window.location.href = '/thank-you.html';
-      })
+      // .then(() => {
+      //   contactForm.innerHTML = `
+      //     <div style="text-align:center;padding:48px 0;">
+      //       <div style="font-size:3rem;margin-bottom:16px;">✅</div>
+      //       <h3 style="color:var(--navy);margin-bottom:12px;">Message Received!</h3>
+      //       <p>Thank you for reaching out. A member of our team will contact you within 1 business day to schedule your free consultation.</p>
+      //       <p style="margin-top:16px;"><strong>Need immediate assistance?</strong> Call us at <a href="tel:6194620133" style="color:var(--blue-bright);">(619) 462-0133</a></p>
+      //     </div>`;
+      //    window.location.href = '/thank-you.html';
+      // })
+
+.then(() => {
+  window.location.href = '/thank-you.html';
+})         
       .catch(() => {
         // Fallback — still show success (Netlify may still process it)
         contactForm.innerHTML = `
