@@ -117,9 +117,9 @@
     counters.forEach(c => counterObserver.observe(c));
   }
 
-  /* --------------------------------------------------
-     FAQ ACCORDION
-  -------------------------------------------------- */
+  // /* --------------------------------------------------
+  //    FAQ ACCORDION
+  // -------------------------------------------------- */
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
       const item   = btn.closest('.faq-item');
@@ -139,6 +139,32 @@
       }
     });
   });
+
+// /* --------------------------------------------------
+  //    NEW FAQ ACCORDION
+  // -------------------------------------------------- */
+  document.querySelectorAll('.new-faq-question').forEach(function (question) {
+
+    question.addEventListener('click', function () {
+
+        const item = this.closest('.new-faq-item');
+        const isOpen = item.classList.contains('is-open');
+
+        // Close all
+        document.querySelectorAll('.new-faq-item.is-open').forEach(function (openItem) {
+            openItem.classList.remove('is-open');
+        });
+
+        // Open clicked item if it was closed
+        if (!isOpen) {
+            item.classList.add('is-open');
+        }
+
+    });
+
+});
+
+
 
   /* --------------------------------------------------
      PORTFOLIO FILTER
