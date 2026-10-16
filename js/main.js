@@ -6,64 +6,210 @@
 (function () {
   'use strict';
 
-  /* --------------------------------------------------
-     NAVIGATION – sticky + mobile menu
-  -------------------------------------------------- */
-  const header = document.getElementById('site-header');
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileClose = document.getElementById('mobile-close');
+  
+/* --------------------------------------------------
+   NAVIGATION – sticky + mobile menu
+-------------------------------------------------- */
 
-  function updateHeader() {
-    if (!header) return;
-    if (window.scrollY > 60) {
-      header.classList.add('scrolled');
-      header.classList.remove('transparent');
-    } else {
-      header.classList.remove('scrolled');
-      if (header.dataset.transparent !== 'false') {
-        header.classList.add('transparent');
-      }
+const header = document.getElementById('site-header');
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-close');
+
+function updateHeader() {
+  if (!header) return;
+
+  if (window.scrollY > 60) {
+    header.classList.add('scrolled');
+    header.classList.remove('transparent');
+  } else {
+    header.classList.remove('scrolled');
+
+    if (header.dataset.transparent !== 'false') {
+      header.classList.add('transparent');
     }
   }
+}
 
-  window.addEventListener('scroll', updateHeader, { passive: true });
-  updateHeader();
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
 
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-    });
-  }
-  if (mobileClose) {
-    mobileClose.addEventListener('click', () => {
-      hamburger && hamburger.classList.remove('open');
-      mobileMenu && mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  }
 
-  // Close mobile menu on link click
-  if (mobileMenu) {
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger && hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  }
+/* --------------------------------------------------
+   MOBILE MENU OPEN / CLOSE
+-------------------------------------------------- */
 
-  // Active nav link
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
-    const href = a.getAttribute('href') || '';
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      a.classList.add('active');
+function openMobileMenu() {
+  if (!mobileMenu) return;
+
+  hamburger?.classList.add('open');
+  mobileMenu.classList.add('open');
+
+  hamburger?.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  if (!mobileMenu) return;
+
+  hamburger?.classList.remove('open');
+  mobileMenu.classList.remove('open');
+
+  hamburger?.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+
+  closeMobileDropdown();
+}
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', function () {
+    if (mobileMenu.classList.contains('open')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
     }
   });
+}
+
+if (mobileClose) {
+  mobileClose.addEventListener('click', closeMobileMenu);
+}
+
+
+/* --------------------------------------------------
+   DESKTOP SERVICES DROPDOWN
+-------------------------------------------------- */
+
+const desktopDropdown = document.querySelector(
+  '#site-header .nav-links .has-dropdown'
+);
+
+const desktopToggle = desktopDropdown?.querySelector(
+  '.services-toggle'
+);
+
+function closeDesktopDropdown() {
+  if (!desktopDropdown || !desktopToggle) return;
+
+  desktopDropdown.classList.remove('is-open');
+  desktopToggle.setAttribute('aria-expanded', 'false');
+}
+
+if (desktopDropdown && desktopToggle) {
+  desktopToggle.setAttribute('aria-expanded', 'false');
+
+  desktopToggle.addEventListener('click', function (event) {
+    // Only the arrow toggles the desktop dropdown.
+    if (!event.target.closest('.dropdown-arrow')) return;
+
+    event.preventDefault();
+
+    const isOpen = desktopDropdown.classList.toggle('is-open');
+
+    desktopToggle.setAttribute(
+      'aria-expanded',
+      String(isOpen)
+    );
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!desktopDropdown.contains(event.target)) {
+      closeDesktopDropdown();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeDesktopDropdown();
+      closeMobileMenu();
+    }
+  });
+}
+
+
+/* --------------------------------------------------
+   MOBILE SERVICES DROPDOWN
+-------------------------------------------------- */
+
+const mobileDropdown = document.querySelector(
+  '#mobile-menu .mobile-has-dropdown'
+);
+
+const mobileToggle = mobileDropdown?.querySelector(
+  '.mobile-services-toggle'
+);
+
+function closeMobileDropdown() {
+  if (!mobileDropdown || !mobileToggle) return;
+
+  mobileDropdown.classList.remove('is-open');
+  mobileToggle.setAttribute('aria-expanded', 'false');
+}
+
+if (mobileDropdown && mobileToggle) {
+  mobileToggle.setAttribute('aria-expanded', 'false');
+
+  mobileToggle.addEventListener('click', function (event) {
+    // Services text navigates normally.
+    // Only the arrow toggles the submenu.
+    if (!event.target.closest('.dropdown-arrow')) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    const isOpen = mobileDropdown.classList.toggle('is-open');
+
+    mobileToggle.setAttribute(
+      'aria-expanded',
+      String(isOpen)
+    );
+  });
+}
+
+
+/* --------------------------------------------------
+   CLOSE MENU ON NORMAL NAVIGATION LINKS
+-------------------------------------------------- */
+
+if (mobileMenu) {
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      // IMPORTANT:
+      // Do not close the menu when clicking the Services arrow.
+      if (
+        link === mobileToggle &&
+        event.target.closest('.dropdown-arrow')
+      ) {
+        return;
+      }
+
+      // All other links work normally.
+      closeMobileMenu();
+    });
+  });
+}
+
+
+/* --------------------------------------------------
+   ACTIVE NAV LINK
+-------------------------------------------------- */
+
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(function (link) {
+  const href = link.getAttribute('href') || '';
+  const linkPath = href.split('?')[0].replace(/\/+$/, '').split('/').pop();
+
+  if (
+    linkPath === currentPage ||
+    (window.location.pathname === '/' && (href.endsWith('/') || linkPath === 'index.html'))
+  ) {
+    link.classList.add('active');
+  }
+});
+
+
+
 
   /* --------------------------------------------------
      SCROLL ANIMATIONS (Intersection Observer)
