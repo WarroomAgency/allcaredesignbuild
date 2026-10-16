@@ -39,61 +39,174 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "GeneralContractor",
-    "@id": "https://allcaredesignbuild.com/#business",
-    "name": "Allcare Design/Build, Inc.",
-    "image": "https://allcaredesignbuild.com/images/og-image.jpg",
-    "logo": "https://allcaredesignbuild.com/images/logo.png",
-    "url": "https://allcaredesignbuild.com",
-    "telephone": "+16193547461",
-    "email": "allcarehomes@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Spring Valley",
-      "addressRegion": "CA",
-      "postalCode": "91977",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 32.7341,
-      "longitude": -116.9989
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "San Diego County, CA"
-    },
-    "openingHoursSpecification": [
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["HomeAndConstructionBusiness", "GeneralContractor"],
+  "@id": "https://allcaredesignbuild.com/#organization",
+  "name": "Allcare Design/Build, Inc.",
+  "alternateName": "Allcare Design/Build",
+  "url": "https://allcaredesignbuild.com/",
+  "logo": "https://allcaredesignbuild.com/images/logo-dark-bg.png",
+  "image": [
+    "https://allcaredesignbuild.com/images/og-image.jpg",
+    "https://allcaredesignbuild.com/images/adu-1.jpg",
+    "https://allcaredesignbuild.com/images/kitchen-1.webp"
+  ],
+  "description": "Allcare Design/Build was founded with a simple belief: Homeowners in San Diego deserve a contractor who listens to them, and treats their property with the same care as their own. For almost four decades, we've been a trusted contractor and builder in San Diego and a leading choice for kitchen and bathroom remodels, room additions, and ADU's. From soup to nuts, our integrated team of architects, designers and construction professionals work together to deliver a finished result the homeowner is proud of. Having completed more than 5,000 projects, we're known for our quality craftsmanship and personalized service. We're proud to say a lot of our customers come from referrals who have seen the high quality of our workmanship.",
+  "telephone": "+1-619-354-7461",
+  "email": "allcarehomes@gmail.com",
+  "foundingDate": "1989",
+  "priceRange": "$$$",
+  "currenciesAccepted": "USD",
+  "slogan": "If you can dream it, Allcare Design/Build can build it.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "YOUR STREET ADDRESS",
+    "addressLocality": "Spring Valley",
+    "addressRegion": "CA",
+    "postalCode": "91977",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 32.7448,
+    "longitude": -116.9992
+  },
+  "hasMap": "https://www.google.com/maps?cid=4545534194662722331",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "license",
+    "name": "California Contractor License B #564360",
+    "recognizedBy": {
+      "@type": "GovernmentOrganization",
+      "name": "California Contractors State License Board"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "127"
+  },
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "San Diego County, CA"},
+    {"@type": "City", "name": "San Diego"},
+    {"@type": "City", "name": "Chula Vista"},
+    {"@type": "City", "name": "El Cajon"},
+    {"@type": "City", "name": "La Mesa"},
+    {"@type": "City", "name": "Santee"},
+    {"@type": "City", "name": "Spring Valley"},
+    {"@type": "City", "name": "Lemon Grove"},
+    {"@type": "City", "name": "National City"},
+    {"@type": "City", "name": "Escondido"},
+    {"@type": "City", "name": "Vista"},
+    {"@type": "City", "name": "Oceanside"},
+    {"@type": "City", "name": "Carlsbad"},
+    {"@type": "City", "name": "San Marcos"},
+    {"@type": "City", "name": "Poway"},
+    {"@type": "City", "name": "Lakeside"},
+    {"@type": "City", "name": "Alpine"},
+    {"@type": "City", "name": "Bonita"},
+    {"@type": "Place", "name": "Clairemont Mesa, San Diego"},
+    {"@type": "Place", "name": "Point Loma, San Diego"},
+    {"@type": "Place", "name": "Mission Valley, San Diego"}
+  ],
+  "knowsAbout": [
+    "ADU construction",
+    "Kitchen remodeling",
+    "Bathroom remodeling",
+    "Whole home remodeling",
+    "Room additions",
+    "New home construction",
+    "San Diego County permitting"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Design-Build Services",
+    "itemListElement": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "08:00",
-        "closes": "17:00"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "ADU Construction",
+          "description": "Custom attached, detached and garage-conversion accessory dwelling units in San Diego County.",
+          "url": "https://allcaredesignbuild.com/services#adu"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kitchen Remodels",
+          "description": "Cabinet refacing to complete gut-and-rebuild kitchen renovations.",
+          "url": "https://allcaredesignbuild.com/services#kitchen"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bathroom Remodels",
+          "description": "Custom tile, fixtures, vanities and walk-in shower bathroom remodels.",
+          "url": "https://allcaredesignbuild.com/services#bathroom"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Whole Home Remodels",
+          "description": "Complete interior and exterior home renovations and reconfigurations.",
+          "url": "https://allcaredesignbuild.com/services#whole-home"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Room Additions",
+          "description": "Bedroom, sunroom, office and living-area additions matching your home's character.",
+          "url": "https://allcaredesignbuild.com/services#additions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "New Construction",
+          "description": "Ground-up custom home builds, including design, permits and construction.",
+          "url": "https://allcaredesignbuild.com/services#new-construction"
+        }
       }
-    ],
-    "priceRange": "$$",
-    "description": "San Diego's premier design-build contractor specializing in ADU construction, kitchen remodels, bathroom remodels, and whole-home renovations since 1989.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
-    },
-    "hasCredential": "CA Contractor License B #564360",
-    "foundingDate": "1989",
-    "numberOfEmployees": "20",
-    "sameAs": [
-      "https://www.google.com/maps?cid=4545534194662722331",
-      "https://www.facebook.com/p/Allcare-DesignBuild-Inc-100063965414625/",
-      "https://www.instagram.com/allcaredesignbuild/",
-      "https://www.yelp.com/biz/allcare-design-build-spring-valley-4",
-      "https://www.houzz.com/professionals/kitchen-and-bath-remodelers/allcare-design-build-pfvwus-pf~664405612",
-      "https://www.bbb.org/us/ca/san-diego/profile/construction-services/allcare-design-build-inc-1126-1027393"
     ]
-  }
-  </script>
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-619-354-7461",
+    "contactType": "customer service",
+    "areaServed": "US-CA",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.facebook.com/allcaredesignandbuild/",
+    "https://www.instagram.com/allcaredesignbuild/",
+    "https://www.yelp.com/biz/allcare-design-build-spring-valley-4",
+    "https://www.linkedin.com/in/richardcerv",
+    "https://www.houzz.com/professionals/kitchen-and-bath-remodelers/allcare-design-build-pfvwus-pf~664405612",
+    "https://www.google.com/maps?cid=4545534194662722331"
+  ]
+}
+</script>
 
   <link rel="stylesheet" href="css/styles.css?v=3" />
   <!-- ==========================================
