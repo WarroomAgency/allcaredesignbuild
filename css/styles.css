@@ -264,7 +264,7 @@ p:last-child { margin-bottom: 0; }
   filter: drop-shadow(0 1px 3px rgba(0,0,0,0.3));
   transition: var(--transition);
 }
-#site-header.scrolled .nav-logo img { height: 38px; }
+#site-header.scrolled .nav-logo img { height: 50px; }
 
 .nav-links {
   display: flex;
