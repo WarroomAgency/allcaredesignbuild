@@ -251,6 +251,7 @@ p:last-child { margin-bottom: 0; }
     padding: 150px 0 0 !important;
 }
 
+
 #site-header.transparent {
   background: transparent;
   padding: 18px 0;
@@ -978,7 +979,7 @@ p:last-child { margin-bottom: 0; }
 /* --- Page Hero (interior pages) --- */
 .page-hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--blue-mid) 100%);
-  padding: 140px 0 70px;
+  padding: 150px 0 70px;
   position: relative;
   overflow: hidden;
 }
@@ -1732,11 +1733,11 @@ html {
 /* Reduce hero top padding on mobile so it doesn't push content too far down */
 @media (max-width: 768px) {
   .hero-content { padding: 90px 0 0; }
-  .page-hero { padding: 100px 0 48px; }
+  .page-hero { padding: 150px 0 48px; }
 }
 @media (max-width: 480px) {
   .hero-content { padding: 80px 0 0; }
-  .page-hero { padding: 90px 0 40px; }
+  .page-hero { padding: 150px 0 40px; }
 }
 
 /* Service stats row: wrap on small screens so 3 stats don't overflow */
