@@ -248,7 +248,7 @@ p:last-child { margin-bottom: 0; }
 }
 
  .hero-content {
-    padding: 150px 0 0;
+    padding: 150px 0 0 !important;
 }
 
 #site-header.transparent {
