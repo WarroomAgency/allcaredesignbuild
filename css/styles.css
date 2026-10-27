@@ -239,7 +239,6 @@ p:last-child { margin-bottom: 0; }
   padding: 18px 0;
   background: var(--navy);
 }
-
     #site-header .nav-logo img{
     height: 90px;
 }
@@ -248,10 +247,9 @@ p:last-child { margin-bottom: 0; }
     height: 80px !important;
 }
 
-#site-header .hero-content {
+ .hero-content {
     padding: 150px 0 0;
 }
-
 
 #site-header.transparent {
   background: transparent;
