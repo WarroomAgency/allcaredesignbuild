@@ -1409,7 +1409,7 @@ p:last-child { margin-bottom: 0; }
   background: none;
 }
 .footer-logo img {
-  height: 44px;
+  height: 90px;
   width: auto;
   filter: drop-shadow(0 1px 3px rgba(0,0,0,0.3));
 }
